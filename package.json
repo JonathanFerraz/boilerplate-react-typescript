@@ -24,7 +24,8 @@
     "prettier-format": "prettier --config .prettierrc  src/**/*.{js,jsx,ts,tsx,sass,scss,css} --write",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
     "pre-commit": "npm run prettier-format && npm run lint",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,sass,scss,css}": [
@@ -50,6 +51,9 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
